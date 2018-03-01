@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Version>1.0.0-alpha01</Version>
+    <Authors>Igor Eroshkin</Authors>
+    <Company>Useful Toolbox .NET</Company>
+    <Copyright>Copyright © 2016 Igor Eroshkin</Copyright>
+    <PackageLicenseUrl>https://github.com/UsefulToolboxNET/Internal.Dev/blob/develop/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/UsefulToolboxNET/Internal.Dev</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/UsefulToolboxNET/Internal.Dev</RepositoryUrl>
+    <PackageTags>usefultoolbox snippets code analysis development internal</PackageTags>
+    <PackageReleaseNotes></PackageReleaseNotes>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>UsefulToolbox.Internal.Dev.snk</AssemblyOriginatorKeyFile>
+    <Description>An internal repository containing common developer tools for the Useful Toolbox .NET projects</Description>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.1" />
+    <PackageReference Include="NuGet.CommandLine" Version="4.5.1" />
+  </ItemGroup>
+
+</Project>
