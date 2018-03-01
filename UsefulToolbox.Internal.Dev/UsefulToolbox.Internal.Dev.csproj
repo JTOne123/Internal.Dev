@@ -2,8 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <Version>1.0.0-alpha01</Version>
+    <Version>1.0.0-alpha.1</Version>
     <Authors>Igor Eroshkin</Authors>
     <Company>Useful Toolbox .NET</Company>
     <Copyright>Copyright © 2016 Igor Eroshkin</Copyright>
@@ -16,10 +17,12 @@
     <AssemblyOriginatorKeyFile>UsefulToolbox.Internal.Dev.snk</AssemblyOriginatorKeyFile>
     <Description>An internal repository containing common developer tools for the Useful Toolbox .NET projects</Description>
     <RepositoryType>git</RepositoryType>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <LangVersion>latest</LangVersion>
+    <IncludeSymbols>false</IncludeSymbols>
+    <IsTool>true</IsTool>
+    <DevelopmentDependency>true</DevelopmentDependency>
+    <NoPackageAnalysis>false</NoPackageAnalysis>
+    <MinClientVersion>4.3</MinClientVersion>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
   </PropertyGroup>
 
   <ItemGroup>
