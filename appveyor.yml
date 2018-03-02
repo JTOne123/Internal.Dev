@@ -1,0 +1,65 @@
+﻿# common configuration
+
+environment:
+  project_version: '1.0.0'
+  project_informational_version: '$(project_version)-alpha.1'
+  project_dev_version: '$(project_informational_version)-dev.{build}'
+  project_version_is_prerelease: true
+
+version: '$(project_version).{build}'
+image: Visual Studio 2017
+skip_tags: true
+
+dotnet_csproj:
+  patch: true
+  file: '**\*.csproj'
+  version: '$(project_informational_version)'
+  package_version: '$(project_informational_version)'
+  assembly_version: '$(project_version)'
+  file_version: '{version}'
+  informational_version: '$(project_informational_version)'
+
+nuget:
+  disable_publish_on_pr: true
+
+cache:
+  - packages -> **\packages.config
+
+install:
+- cmd: appveyor DownloadFile https://dist.nuget.org/win-x86-commandline/latest/nuget.exe
+
+before_build:
+- cmd: nuget restore
+  
+build:
+  publish_nuget: true
+  verbosity: minimal
+
+for:
+# master configuration (build, deploy)
+-
+  branches:
+    only:
+    - master
+
+  configuration: Release
+  
+  deploy:
+  - provider: GitHub
+    tag: 'v$(project_informational_version)'
+    auth_token:
+      secure: z5IHp5ppPl5eKrj8UVA8/dfPSo0D8ZW2YhaiNvd/iEiEGmE09ltKI5g8LjBCov1w
+    prerelease: $(project_version_is_prerelease)
+
+#development configuration (build)
+-
+  branches:
+    only:
+    - develop
+
+  configuration: Debug
+
+  dotnet_csproj:
+    version: '$(project_dev_version)'
+    package_version: '$(project_dev_version)'
+    informational_version: '$(project_dev_version)'
