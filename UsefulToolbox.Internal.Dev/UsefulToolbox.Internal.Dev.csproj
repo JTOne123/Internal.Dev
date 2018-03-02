@@ -4,7 +4,8 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <LangVersion>latest</LangVersion>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <Version>1.0.0-alpha.1</Version>
+    <Version>1.0.0</Version>
+    <PackageVersion>1.0.0</PackageVersion>
     <Authors>Igor Eroshkin</Authors>
     <Company>Useful Toolbox .NET</Company>
     <Copyright>Copyright © 2016 Igor Eroshkin</Copyright>
@@ -15,14 +16,17 @@
     <PackageReleaseNotes></PackageReleaseNotes>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>UsefulToolbox.Internal.Dev.snk</AssemblyOriginatorKeyFile>
-    <Description>An internal repository containing common developer tools for the Useful Toolbox .NET projects</Description>
+    <Description>An internal library containing common developer tools for the Useful Toolbox .NET projects</Description>
     <RepositoryType>git</RepositoryType>
     <IncludeSymbols>false</IncludeSymbols>
     <IsTool>true</IsTool>
     <DevelopmentDependency>true</DevelopmentDependency>
     <NoPackageAnalysis>false</NoPackageAnalysis>
     <MinClientVersion>4.3</MinClientVersion>
-    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <IncludeBuildOutput>true</IncludeBuildOutput>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <InformationalVersion>1.0.0.0</InformationalVersion>
   </PropertyGroup>
 
   <ItemGroup>
