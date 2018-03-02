@@ -1,12 +1,11 @@
 ﻿# common configuration
 
 environment:
-  project_version: 1.0.0
+  project_version: '1.0.0'
   project_informational_version: '$(project_version)-alpha.1'
-  project_dev_version: $(project_informational_version)-dev.{build}
   project_version_is_prerelease: true
 
-version: $(project_version).{build}
+version: '$(project_version).{build}'
 image: Visual Studio 2017
 skip_tags: true
 
@@ -56,6 +55,9 @@ for:
   branches:
     only:
     - develop
+
+  environment:
+    project_dev_version: '$(project_informational_version)-dev.{build}'
 
   configuration: Debug
 
