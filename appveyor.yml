@@ -57,11 +57,11 @@ for:
     - develop
 
   environment:
-    project_dev_version: '$(project_informational_version)-dev.{build}'
+    project_dev_version: '$(project_informational_version)-dev'
 
   configuration: Debug
 
   dotnet_csproj:
-    version: '$(project_dev_version)'
-    package_version: '$(project_dev_version)'
-    informational_version: '$(project_dev_version)'
+    version: '$(project_dev_version).{build}'
+    package_version: '$(project_dev_version).{build}'
+    informational_version: '$(project_dev_version).{build}'
