@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>void Dispose()</Title>
+      <Author>Igor Eroshkin</Author>
+      <Description>Code snippet for the dispose pattern</Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>dispose</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>UsefulToolbox.Internal</Namespace>
+        </Import>
+      </Imports>
+      <Code Language="csharp" Delimiter="$">
+        <![CDATA[private readonly AtomicFlag _isDisposed = new AtomicFlag();
+
+protected virtual void Dispose(bool disposing)
+{
+	if (_isDisposed.TrySet())
+	{
+		if (disposing)
+		{
+			$end$
+		}
+	}
+}
+
+public void Dispose()
+{
+	Dispose(true);
+	GC.SuppressFinalize(this);
+}]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+  
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>void CheckDisposed()</Title>
+      <Author>Igor Eroshkin</Author>
+      <Description>Code snippet for the CheckDisposed method</Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>checkdisposed</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+      </Imports>
+      <Code Language="csharp" Delimiter="$">
+        <![CDATA[private void CheckDisposed()
+{
+	if (_isDisposed)
+	{
+		throw new ObjectDisposedException(GetType().Name);
+	}
+}]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

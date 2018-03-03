@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>Substitute&lt;T&gt;()</Title>
+      <Author>Igor Eroshkin</Author>
+      <Description>Code snippet for the Substitute&lt;T&gt;() helper</Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>sub</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>static UsefulToolbox.NSubstitute.Extensions.SubstituteHelpers</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>TypeName</ID>
+          <ToolTip>Name of the type to substitute</ToolTip>
+          <Default>TypeName</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp" Delimiter="$"><![CDATA[Substitute<$TypeName$>()$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RuleSet Name="Useful Toolbox Rules" Description="Analyser rules for the Useful Toolbox assemblies." ToolsVersion="15.0">
+  <IncludeAll Action="Warning" />
+  <Rules AnalyzerId="Microsoft.Analyzers.ManagedCodeAnalysis" RuleNamespace="Microsoft.Rules.Managed">
+    <Rule Id="CA1020" Action="Info" />
+  </Rules>
+  <Rules AnalyzerId="Microsoft.CodeAnalysis.CSharp" RuleNamespace="Microsoft.CodeAnalysis.CSharp">
+    <Rule Id="CS8019" Action="Info" />
+    <Rule Id="CS8020" Action="Warning" />
+  </Rules>
+  <Rules AnalyzerId="Microsoft.CodeAnalysis.CSharp.EditorFeatures" RuleNamespace="Microsoft.CodeAnalysis.CSharp.EditorFeatures">
+    <Rule Id="UseAutoProperty" Action="Info" />
+    <Rule Id="UseAutoPropertyFadedToken" Action="Info" />
+  </Rules>
+  <Rules AnalyzerId="Microsoft.CodeAnalysis.CSharp.Features" RuleNamespace="Microsoft.CodeAnalysis.CSharp.Features">
+    <Rule Id="IDE0001" Action="Info" />
+    <Rule Id="IDE0002" Action="Info" />
+    <Rule Id="IDE0003" Action="Info" />
+    <Rule Id="IDE0005" Action="None" />
+    <Rule Id="IDE0007" Action="Info" />
+    <Rule Id="IDE0011" Action="Info" />
+    <Rule Id="IDE0012" Action="Info" />
+    <Rule Id="IDE0013" Action="Info" />
+    <Rule Id="IDE0014" Action="Info" />
+    <Rule Id="IDE0015" Action="Info" />
+    <Rule Id="IDE0017" Action="Info" />
+    <Rule Id="IDE0018" Action="Info" />
+    <Rule Id="IDE0019" Action="Info" />
+    <Rule Id="IDE0020" Action="Info" />
+    <Rule Id="IDE0021" Action="None" />
+    <Rule Id="IDE0025" Action="Info" />
+    <Rule Id="IDE0026" Action="Info" />
+    <Rule Id="IDE0027" Action="Info" />
+    <Rule Id="IDE0028" Action="Info" />
+    <Rule Id="IDE0029" Action="Info" />
+    <Rule Id="IDE0030" Action="Info" />
+    <Rule Id="IDE0031" Action="Info" />
+    <Rule Id="IDE0034" Action="Info" />
+    <Rule Id="IDE0036" Action="Info" />
+    <Rule Id="IDE0037" Action="None" />
+    <Rule Id="IDE0037WithoutSuggestion" Action="None" />
+    <Rule Id="IDE0039" Action="Info" />
+    <Rule Id="IDE0040" Action="Info" />
+    <Rule Id="IDE0041" Action="Info" />
+    <Rule Id="IDE0042" Action="Info" />
+    <Rule Id="IDE1005" Action="Info" />
+    <Rule Id="IDE1006" Action="Warning" />
+  </Rules>
+</RuleSet>
