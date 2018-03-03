@@ -45,7 +45,7 @@ for:
   - provider: GitHub
     tag: 'v$(project_informational_version)'
     auth_token:
-      secure: z5IHp5ppPl5eKrj8UVA8/dfPSo0D8ZW2YhaiNvd/iEiEGmE09ltKI5g8LjBCov1w
+      secure: yAleN5ybZ8HHKsA77KJSEz9Rqe2Gy15BJ0D/gUpxt/qPqnFYdlTPvBz+OWiuHPjp
     prerelease: $(project_version_is_prerelease)
 
 #development configuration (build)
