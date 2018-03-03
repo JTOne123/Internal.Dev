@@ -10,7 +10,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{AB53B85F
 		appveyor.yml = appveyor.yml
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsefulToolbox.Internal.Dev.IntergationTests", "UsefulToolbox.Internal.Dev.IntergationTests\UsefulToolbox.Internal.Dev.IntergationTests.csproj", "{9314A5E5-96FA-4DB6-8313-81F69494B9DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UsefulToolbox.Internal.Dev.IntergationTests", "UsefulToolbox.Internal.Dev.IntergationTests\UsefulToolbox.Internal.Dev.IntergationTests.csproj", "{9314A5E5-96FA-4DB6-8313-81F69494B9DA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Other", "Other", "{12A06EE5-A404-46A6-B896-FC786DE3238B}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
