@@ -4,8 +4,14 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <LangVersion>latest</LangVersion>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>UsefulToolbox.Internal.Dev.snk</AssemblyOriginatorKeyFile>
+    <CodeAnalysisRuleSet>.\CodeAnalysis\Analyser.ruleset</CodeAnalysisRuleSet>
     <Version>1.0.0</Version>
     <PackageVersion>1.0.0</PackageVersion>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <InformationalVersion>1.0.0.0</InformationalVersion>
     <Authors>Igor Eroshkin</Authors>
     <Company>Useful Toolbox .NET</Company>
     <Copyright>Copyright © 2016 Igor Eroshkin</Copyright>
@@ -14,8 +20,6 @@
     <RepositoryUrl>https://github.com/UsefulToolboxNET/Internal.Dev</RepositoryUrl>
     <PackageTags>useful toolbox;snippets;code analysis;development;internal</PackageTags>
     <PackageReleaseNotes></PackageReleaseNotes>
-    <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>UsefulToolbox.Internal.Dev.snk</AssemblyOriginatorKeyFile>
     <Description>An internal library containing common developer tools for the Useful Toolbox .NET projects</Description>
     <RepositoryType>git</RepositoryType>
     <IncludeSymbols>false</IncludeSymbols>
@@ -24,13 +28,11 @@
     <NoPackageAnalysis>false</NoPackageAnalysis>
     <MinClientVersion>4.3</MinClientVersion>
     <IncludeBuildOutput>false</IncludeBuildOutput>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>1.0.0.0</FileVersion>
-    <InformationalVersion>1.0.0.0</InformationalVersion>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.1" />
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.6.0" />
     <PackageReference Include="NuGet.CommandLine" Version="4.5.1" />
   </ItemGroup>
 
