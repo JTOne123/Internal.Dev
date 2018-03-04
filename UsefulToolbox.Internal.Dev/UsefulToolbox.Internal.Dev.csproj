@@ -32,13 +32,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="CodeAnalysis\Analyser.ruleset">
-      <Pack>true</Pack>
-      <PackagePath></PackagePath>
+    <Content Include="Analyser.ruleset">
+      <BuildAction>None</BuildAction>
     </Content>
-    <Content Include="CodeAnalysis\CodeAnalysisDictionary.xml">
-      <Pack>true</Pack>
-      <PackagePath></PackagePath>
+    <Content Include="CodeAnalysisDictionary.xml">
+      <BuildAction>None</BuildAction>
     </Content>
   </ItemGroup>
 
