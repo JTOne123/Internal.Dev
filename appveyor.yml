@@ -55,7 +55,7 @@ for:
     - develop
 
   environment:
-    project_dev_version: '$(project_informational_version).dev.2'
+    project_dev_version: '$(project_informational_version).dev'
 
   configuration: Debug
 

@@ -28,7 +28,19 @@
     <NoPackageAnalysis>false</NoPackageAnalysis>
     <MinClientVersion>4.3</MinClientVersion>
     <IncludeBuildOutput>false</IncludeBuildOutput>
+    <IncludeContentInPack>true</IncludeContentInPack>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="CodeAnalysis\Analyser.ruleset">
+      <Pack>true</Pack>
+      <PackagePath></PackagePath>
+    </Content>
+    <Content Include="CodeAnalysis\CodeAnalysisDictionary.xml">
+      <Pack>true</Pack>
+      <PackagePath></PackagePath>
+    </Content>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.1" />
