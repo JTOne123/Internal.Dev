@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<RuleSet Name="UsefulToolboxRules" Description="Analyser rules for the Useful Toolbox .NET assemblies." ToolsVersion="15.0">
+<RuleSet Name="Useful Toolbox Rules" Description="Analyser rules for the Useful Toolbox .NET assemblies." ToolsVersion="15.0">
   <IncludeAll Action="Warning" />
   <Rules AnalyzerId="Microsoft.CodeQuality.Analyzers" RuleNamespace="Microsoft.CodeQuality.Analyzers">
     <Rule Id="CA1008" Action="Warning" />
@@ -15,6 +15,7 @@
     <Rule Id="CA1711" Action="Warning" />
     <Rule Id="CA1725" Action="Warning" />
     <Rule Id="CA2217" Action="Warning" />
+    <Rule Id="CA2007" Action="Error" />
   </Rules>
   <Rules AnalyzerId="Microsoft.CodeQuality.CSharp.Analyzers" RuleNamespace="Microsoft.CodeQuality.CSharp.Analyzers">
     <Rule Id="Async001" Action="Warning" />

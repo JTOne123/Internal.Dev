@@ -6,7 +6,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>UsefulToolbox.Internal.Dev.snk</AssemblyOriginatorKeyFile>
-    <CodeAnalysisRuleSet>.\CodeAnalysis\Analyser.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>UsefulToolbox.ruleset</CodeAnalysisRuleSet>
     <Version>1.0.0</Version>
     <PackageVersion>1.0.0</PackageVersion>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
@@ -32,16 +32,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="Analyser.ruleset">
-      <BuildAction>None</BuildAction>
-    </Content>
-    <Content Include="CodeAnalysisDictionary.xml">
-      <BuildAction>None</BuildAction>
-    </Content>
+    <None Update="UsefulToolbox.ruleset" Pack="true" PackagePath="build" />
+    <None Update="CodeAnalysisDictionary.xml" Pack="true" />
+    <None Update="Build\UsefulToolbox.Internal.Dev.props" Pack="true" PackagePath="build\UsefulToolbox.Internal.Dev.props" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="ConfigureAwaitChecker.Analyzer" Version="1.0.1" />
     <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.6.0" />
     <PackageReference Include="NuGet.CommandLine" Version="4.5.1" />
   </ItemGroup>
