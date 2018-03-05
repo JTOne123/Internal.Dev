@@ -15,7 +15,6 @@
     <Rule Id="CA1711" Action="Warning" />
     <Rule Id="CA1725" Action="Warning" />
     <Rule Id="CA2217" Action="Warning" />
-    <Rule Id="CA2007" Action="Error" />
   </Rules>
   <Rules AnalyzerId="Microsoft.CodeQuality.CSharp.Analyzers" RuleNamespace="Microsoft.CodeQuality.CSharp.Analyzers">
     <Rule Id="Async001" Action="Warning" />
