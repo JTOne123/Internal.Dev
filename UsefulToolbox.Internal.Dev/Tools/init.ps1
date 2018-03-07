@@ -20,7 +20,7 @@ foreach ($vsPath in $vsPaths)
       New-Item -ItemType Directory -Path $snippetsTargetPath | Out-Null
     }
 
-    Write-Host "Import Useful Toolbox code snippets from $snippetsPath to $snippetsTargetPath"
+    Write-Host "Importing Useful Toolbox code snippets from $snippetsPath to $snippetsTargetPath"
     Copy-Item -Path "$snippetsPath\*.snippet" -Destination $snippetsTargetPath
   }
 }
