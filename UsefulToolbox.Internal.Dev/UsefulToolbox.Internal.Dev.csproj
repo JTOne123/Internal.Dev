@@ -45,6 +45,10 @@
     <None Update="CodeSnippets\StringInterpolation.snippet" Pack="true" PackagePath="CodeSnippets\StringInterpolation.snippet" />
     <None Update="CodeSnippets\TestHelpers.snippet" Pack="true" PackagePath="CodeSnippets\TestHelpers.snippet" />
   </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Tools\init.ps1" Pack="true" PackagePath="tools\init.ps1" />
+  </ItemGroup>
   
   <ItemGroup>
     <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.6.0" />
