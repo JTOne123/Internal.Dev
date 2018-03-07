@@ -6,9 +6,9 @@ $vsYear = "20" + ($vsVersion.Major + 1).ToString()
 $documentsPath = [Environment]::getFolderPath("MyDocuments")
 $snippetsLinkPath = "$documentsDir\Visual Studio $vsYear\Code Snippets\Visual C#\UsefulToolbox"
 
-if (Test-Path $snippetsTargetPath)
+if (Test-Path $snippetsLinkPath)
 {
-  (Get-Item $snippetsTargetPath).Delete()
+  (Get-Item $snippetsLinkPath).Delete()
 }
 
 New-Item -ItemType SymbolicLink -Path $snippetsLinkPath -Target $snippetsPath
