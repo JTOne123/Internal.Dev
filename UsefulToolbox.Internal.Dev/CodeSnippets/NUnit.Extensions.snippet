@@ -1,0 +1,524 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>NUnit Test Class</Title>
+      <Author>Igor Eroshkin</Author>
+      <Description>Code snippet for an NUnit test class</Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>tclass</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>NUnit.Framework</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>ClassName</ID>
+          <ToolTip>Name of the tested class</ToolTip>
+          <Default>ClassName</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp" Delimiter="$">
+        <![CDATA[[TestFixture]
+[TestOf(typeof($ClassName$))]
+[Parallelizable]
+public class $ClassName$Tests
+{
+    $end$
+}]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>NUnit Abstract Test Class</Title>
+      <Author>Igor Eroshkin</Author>
+      <Description>Code snippet for an NUnit abstract test class</Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>atclass</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>ClassName</ID>
+          <ToolTip>Name of the test class</ToolTip>
+          <Default>ClassName</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp" Delimiter="$">
+        <![CDATA[public abstract class $ClassName$Tests
+{
+    $end$
+}]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>NUnit Test Case Helper</Title>
+      <Author>Igor Eroshkin</Author>
+      <Description>Code snippet for an NUnit test case helper method</Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>tcaseh</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>NUnit.Framework</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>parameters</ID>
+          <ToolTip>Test case parameters</ToolTip>
+          <Default>
+          </Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>arguments</ID>
+          <ToolTip>Test case arguments</ToolTip>
+          <Default>
+          </Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp" Delimiter="$">
+        <![CDATA[private static TestCaseData TestCase($parameters$)
+{
+	return new TestCaseData($arguments$);$end$
+}]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>NUnit Test Method</Title>
+      <Author>Igor Eroshkin</Author>
+      <Description>Code snippet for an NUnit test method</Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>tmethod</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>NUnit.Framework</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>MethodName</ID>
+          <ToolTip>Name of the tested method</ToolTip>
+          <Default>MethodName</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>TestName</ID>
+          <ToolTip>Name of the method test</ToolTip>
+          <Default>TestName</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp" Delimiter="$">
+        <![CDATA[[Test]
+public void $MethodName$_$TestName$()
+{
+	$end$
+}]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>NUnit Async Test Method</Title>
+      <Author>Igor Eroshkin</Author>
+      <Description>Code snippet for an NUnit async test method</Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>atmethod</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>NUnit.Framework</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Threading.Tasks</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>MethodName</ID>
+          <ToolTip>Name of the tested method</ToolTip>
+          <Default>MethodName</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>TestName</ID>
+          <ToolTip>Name of the method test</ToolTip>
+          <Default>TestName</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp" Delimiter="$">
+        <![CDATA[[Test]
+public async Task $MethodName$Async_$TestName$()
+{
+	$end$
+}]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>NUnit Null Argument Test Method</Title>
+      <Author>Igor Eroshkin</Author>
+      <Description>Code snippet for an NUnit test method that checks for ArgumentNullException</Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>tmethodn</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>NUnit.Framework</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>MethodName</ID>
+          <ToolTip>Name of the tested method</ToolTip>
+          <Default>MethodName</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>ArgumentName</ID>
+          <ToolTip>Name of the tested argument</ToolTip>
+          <Default>ArgumentName</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp" Delimiter="$">
+        <![CDATA[[Test]
+public void $MethodName$_Null$ArgumentName$_ThrowsArgumentNullException()
+{
+	Assert.Catch<ArgumentNullException>(() => $end$);
+}]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>NUnit Null Argument Async Test Method</Title>
+      <Author>Igor Eroshkin</Author>
+      <Description>Code snippet for an NUnit async test method that checks for ArgumentNullException</Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>atmethodn</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>NUnit.Framework</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>MethodName</ID>
+          <ToolTip>Name of the tested method</ToolTip>
+          <Default>MethodName</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>ArgumentName</ID>
+          <ToolTip>Name of the tested argument</ToolTip>
+          <Default>ArgumentName</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp" Delimiter="$">
+        <![CDATA[[Test]
+public void $MethodName$Async_Null$ArgumentName$_ThrowsArgumentNullException()
+{
+	Assert.CatchAsync<ArgumentNullException>(() => $end$);
+}]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>NUnit Test Method With Abstract Test Cases</Title>
+      <Author>Igor Eroshkin</Author>
+      <Description>Code snippet for an NUnit test method with abstract test cases</Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>tmethodas</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Collections.Generic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>NUnit.Framework</Namespace>
+        </Import>
+        <Import>
+          <Namespace>UsefulToolbox.NUnit.Extensions</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>MethodName</ID>
+          <ToolTip>Name of the tested method</ToolTip>
+          <Default>MethodName</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>TestName</ID>
+          <ToolTip>Name of the method test</ToolTip>
+          <Default>TestName</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp" Delimiter="$">
+        <![CDATA[[TestCaseInstanceSource(nameof($MethodName$TestCases))]
+public void $MethodName$_$TestName$()
+{
+	$end$
+}
+		
+protected abstract IEnumerable<TestCaseData> $MethodName$TestCases { get; }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>>NUnit Async Test Method With Abstract Test Cases</Title>
+      <Author>Igor Eroshkin</Author>
+      <Description>Code snippet for an NUnit async test method with abstract test cases</Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>atmethodas</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Collections.Generic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Threading.Tasks</Namespace>
+        </Import>
+        <Import>
+          <Namespace>NUnit.Framework</Namespace>
+        </Import>
+        <Import>
+          <Namespace>UsefulToolbox.NUnit.Extensions</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>MethodName</ID>
+          <ToolTip>Name of the tested method</ToolTip>
+          <Default>MethodName</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>TestName</ID>
+          <ToolTip>Name of the method test</ToolTip>
+          <Default>TestName</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp" Delimiter="$">
+        <![CDATA[[TestCaseInstanceSource(nameof($MethodName$TestCases))]
+public async Task $MethodName$Async_$TestName$()
+{
+	$end$
+}
+		
+protected abstract IEnumerable<TestCaseData> $MethodName$TestCases { get; }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>NUnit Test Method With Test Cases</Title>
+      <Author>Igor Eroshkin</Author>
+      <Description>Code snippet for an NUnit test method with test cases</Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>tmethods</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Collections.Generic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>NUnit.Framework</Namespace>
+        </Import>
+        <Import>
+          <Namespace>static UsefulToolbox.NUnit.Extensions.TestCaseHelpers</Namespace>
+        </Import>
+        <Import>
+          <Namespace>UsefulToolbox.NUnit.Extensions</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>MethodName</ID>
+          <ToolTip>Name of the tested method</ToolTip>
+          <Default>MethodName</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>TestName</ID>
+          <ToolTip>Name of the method test</ToolTip>
+          <Default>TestName</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp" Delimiter="$">
+        <![CDATA[[TestCaseInstanceSource(nameof($MethodName$TestCases))]
+public void $MethodName$_$TestName$()
+{
+	$end$
+}
+		
+private IEnumerable<TestCaseData> $MethodName$TestCases => TestCases(
+);]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>NUnit Async Test Method With Test Cases</Title>
+      <Author>Igor Eroshkin</Author>
+      <Description>Code snippet for an NUnit async test method with test cases</Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>atmethods</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>System.Collections.Generic</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Threading.Tasks</Namespace>
+        </Import>
+        <Import>
+          <Namespace>NUnit.Framework</Namespace>
+        </Import>
+        <Import>
+          <Namespace>static UsefulToolbox.NUnit.Extensions.TestCaseHelpers</Namespace>
+        </Import>
+        <Import>
+          <Namespace>UsefulToolbox.NUnit.Extensions</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>MethodName</ID>
+          <ToolTip>Name of the tested method</ToolTip>
+          <Default>MethodName</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>TestName</ID>
+          <ToolTip>Name of the method test</ToolTip>
+          <Default>TestName</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp" Delimiter="$">
+        <![CDATA[[TestCaseInstanceSource(nameof($MethodName$TestCases))]
+public async Task $MethodName$Async_$TestName$()
+{
+	$end$
+}
+		
+private IEnumerable<TestCaseData> $MethodName$TestCases => TestCases(
+);]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

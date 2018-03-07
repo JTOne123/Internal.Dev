@@ -38,6 +38,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="CodeSnippets\Argument.snippet" Pack="true" PackagePath="CodeSnippets\Argument.snippet" />
+    <None Update="CodeSnippets\Disposable.snippet" Pack="true" PackagePath="CodeSnippets\Disposable.snippet" />
+    <None Update="CodeSnippets\NSubstitute.Extensions.snippet" Pack="true" PackagePath="CodeSnippets\NSubstitute.Extensions.snippet" />
+    <None Update="CodeSnippets\NUnit.Extensions.snippet" Pack="true" PackagePath="CodeSnippets\NUnit.Extensions.snippet" />
+    <None Update="CodeSnippets\StringInterpolation.snippet" Pack="true" PackagePath="CodeSnippets\StringInterpolation.snippet" />
+    <None Update="CodeSnippets\TestHelpers.snippet" Pack="true" PackagePath="CodeSnippets\TestHelpers.snippet" />
+  </ItemGroup>
+  
+  <ItemGroup>
     <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.6.0" />
     <PackageReference Include="NuGet.CommandLine" Version="4.5.1" />
   </ItemGroup>
