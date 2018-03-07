@@ -1,14 +1,25 @@
 ﻿param($installPath, $toolsPath, $package, $project)
 
 $snippetsPath = "$installPath\CodeSnippets"
-$vsVersion = [System.Version]::Parse($dte.Version)
-$vsYear = "20" + ($vsVersion.Major + 1).ToString()
 $documentsPath = [Environment]::getFolderPath("MyDocuments")
-$snippetsLinkPath = "$documentsDir\Visual Studio $vsYear\Code Snippets\Visual C#\UsefulToolbox"
 
-if (Test-Path $snippetsLinkPath)
+$vsPaths = Get-ChildItem -Path $documentsPath -Directory -Filter "Visual Studio *"
+foreach ($vsPath in $vsPaths)
 {
-  (Get-Item $snippetsLinkPath).Delete()
-}
+  $vsSnippetsPath = $vsPath.FullName + "\Code Snippets\Visual C#"
+  if (Test-Path $vsSnippetsPath)
+  {
+    $snippetsTargetPath = "$vsSnippetsPath\UsefulToolbox"
 
-New-Item -ItemType SymbolicLink -Path $snippetsLinkPath -Target $snippetsPath
+    if (Test-Path $snippetsTargetPath)
+    {
+      Get-ChildItem -Path $snippetsTargetPath -Include "*.snippet" -File | foreach { $_.Delete()}
+    }
+    else 
+    {
+      New-Item -ItemType Directory -Path $snippetsTargetPath | Out-Null
+    }
+    
+    Copy-Item -Path "$snippetsPath\*.snippet" -Destination $snippetsTargetPath
+  }
+}
