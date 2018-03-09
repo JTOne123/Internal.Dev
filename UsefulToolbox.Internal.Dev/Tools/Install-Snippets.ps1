@@ -1,6 +1,4 @@
-﻿param($installPath, $toolsPath, $package, $project)
-
-$snippetsPath = "$installPath\CodeSnippets"
+﻿$snippetsPath = "$PSScriptRoot\..\CodeSnippets"
 $documentsPath = [Environment]::getFolderPath("MyDocuments")
 
 $vsPaths = Get-ChildItem -Path $documentsPath -Directory -Filter "Visual Studio *"

@@ -47,7 +47,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Tools\init.ps1" Pack="true" PackagePath="tools\init.ps1" />
+    <None Update="Tools\Install-Snippets.ps1" Pack="true" PackagePath="tools\Install-Snippets.ps1" />
   </ItemGroup>
   
   <ItemGroup>
