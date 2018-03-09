@@ -12,7 +12,7 @@ foreach ($vsPath in $vsPaths)
     {
       Write-Host "Remove Useful Toolbox code snippets from $snippetsTargetPath"
       Get-ChildItem -Path $snippetsTargetPath -Include "*.snippet" -File | foreach { $_.Delete()}
-      Remove-Item -Path $snippetsTargetPath
+      Remove-Item -Path $snippetsTargetPath -Force -Recurse
     }
   }
 }
