@@ -25,17 +25,17 @@
     <IncludeSymbols>false</IncludeSymbols>
     <IsTool>true</IsTool>
     <DevelopmentDependency>true</DevelopmentDependency>
-    <NoPackageAnalysis>false</NoPackageAnalysis>
+    <NoPackageAnalysis>true</NoPackageAnalysis>
     <MinClientVersion>4.3</MinClientVersion>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <IncludeContentInPack>true</IncludeContentInPack>
   </PropertyGroup>
 
   <ItemGroup>
-
     <None Update="UsefulToolbox.ruleset" Pack="true" PackagePath="build" />
     <None Update="CodeAnalysisDictionary.xml" Pack="true" />
     <None Update="Build\UsefulToolbox.Internal.Dev.props" Pack="true" PackagePath="build\UsefulToolbox.Internal.Dev.props" />
+    <None Update=".editorconfig" Pack="true" />
   </ItemGroup>
 
   <ItemGroup>
