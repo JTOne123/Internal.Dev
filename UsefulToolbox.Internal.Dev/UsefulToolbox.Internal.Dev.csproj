@@ -32,6 +32,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+
     <None Update="UsefulToolbox.ruleset" Pack="true" PackagePath="build" />
     <None Update="CodeAnalysisDictionary.xml" Pack="true" />
     <None Update="Build\UsefulToolbox.Internal.Dev.props" Pack="true" PackagePath="build\UsefulToolbox.Internal.Dev.props" />
@@ -47,7 +48,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Tools\Install-Snippets.ps1" Pack="true" PackagePath="tools\Install-Snippets.ps1" />
+    <None Update="Tools\Snippets-Install.ps1" Pack="true" PackagePath="tools\Snippets-Install.ps1" />
+    <None Update="Tools\Snippets-Uninstall.ps1" Pack="true" PackagePath="tools\Snippets-Uninstall.ps1" />
   </ItemGroup>
   
   <ItemGroup>
