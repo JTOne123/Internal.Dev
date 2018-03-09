@@ -6,7 +6,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>UsefulToolbox.Internal.Dev.snk</AssemblyOriginatorKeyFile>
-    <CodeAnalysisRuleSet>UsefulToolbox.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>CodingConventions\UsefulToolbox.ruleset</CodeAnalysisRuleSet>
     <Version>1.0.0</Version>
     <PackageVersion>1.0.0</PackageVersion>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
@@ -18,9 +18,9 @@
     <PackageLicenseUrl>https://github.com/UsefulToolboxNET/Internal.Dev/blob/develop/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/UsefulToolboxNET/Internal.Dev</PackageProjectUrl>
     <RepositoryUrl>https://github.com/UsefulToolboxNET/Internal.Dev</RepositoryUrl>
-    <PackageTags>useful toolbox;snippets;code analysis;development;internal</PackageTags>
+    <PackageTags>useful toolbox;code snippets;code analysis;development;internal</PackageTags>
     <PackageReleaseNotes></PackageReleaseNotes>
-    <Description>An internal library containing common developer tools for the Useful Toolbox .NET projects</Description>
+    <Description>An internal package containing common developer tools for the Useful Toolbox .NET projects. Applications and libraries should not reference this package directly. </Description>
     <RepositoryType>git</RepositoryType>
     <IncludeSymbols>false</IncludeSymbols>
     <IsTool>true</IsTool>
@@ -30,21 +30,21 @@
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <IncludeContentInPack>true</IncludeContentInPack>
   </PropertyGroup>
-
+  
   <ItemGroup>
-    <None Update="UsefulToolbox.ruleset" Pack="true" PackagePath="build" />
+    <None Update="CodingConventions\UsefulToolbox.ruleset" Pack="true" PackagePath="codingConventions\UsefulToolbox.ruleset" />
+    <None Update="CodingConventions\UsefulToolbox.editorconfig" Pack="true" PackagePath="codingConventions\UsefulToolbox.editorconfig" />
     <None Update="CodeAnalysisDictionary.xml" Pack="true" />
     <None Update="Build\UsefulToolbox.Internal.Dev.props" Pack="true" PackagePath="build\UsefulToolbox.Internal.Dev.props" />
-    <None Update=".editorconfig" Pack="true" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="CodeSnippets\Argument.snippet" Pack="true" PackagePath="CodeSnippets\Argument.snippet" />
-    <None Update="CodeSnippets\Disposable.snippet" Pack="true" PackagePath="CodeSnippets\Disposable.snippet" />
-    <None Update="CodeSnippets\NSubstitute.Extensions.snippet" Pack="true" PackagePath="CodeSnippets\NSubstitute.Extensions.snippet" />
-    <None Update="CodeSnippets\NUnit.Extensions.snippet" Pack="true" PackagePath="CodeSnippets\NUnit.Extensions.snippet" />
-    <None Update="CodeSnippets\StringInterpolation.snippet" Pack="true" PackagePath="CodeSnippets\StringInterpolation.snippet" />
-    <None Update="CodeSnippets\TestHelpers.snippet" Pack="true" PackagePath="CodeSnippets\TestHelpers.snippet" />
+    <None Update="CodeSnippets\Argument.snippet" Pack="true" PackagePath="codeSnippets\Argument.snippet" />
+    <None Update="CodeSnippets\Disposable.snippet" Pack="true" PackagePath="codeSnippets\Disposable.snippet" />
+    <None Update="CodeSnippets\NSubstitute.Extensions.snippet" Pack="true" PackagePath="codeSnippets\NSubstitute.Extensions.snippet" />
+    <None Update="CodeSnippets\NUnit.Extensions.snippet" Pack="true" PackagePath="codeSnippets\NUnit.Extensions.snippet" />
+    <None Update="CodeSnippets\StringInterpolation.snippet" Pack="true" PackagePath="codeSnippets\StringInterpolation.snippet" />
+    <None Update="CodeSnippets\TestHelpers.snippet" Pack="true" PackagePath="codeSnippets\TestHelpers.snippet" />
   </ItemGroup>
 
   <ItemGroup>
