@@ -1,8 +1,8 @@
-﻿# common configuration
+# common configuration
 
 environment:
   project_version: '1.0.0'
-  project_informational_version: '$(project_version)-alpha.3'
+  project_informational_version: '$(project_version)-beta.1'
   project_version_is_prerelease: true
 
 version: '$(project_version).{build}'
