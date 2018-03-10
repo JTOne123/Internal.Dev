@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="UsefulToolbox.Internal.Dev" Version="1.0.0-alpha.3.dev.37">
+    <PackageReference Include="UsefulToolbox.Internal.Dev" Version="1.0.0-alpha.3.dev.38">
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
   </ItemGroup>

@@ -50,6 +50,7 @@
   <ItemGroup>
     <None Update="Tools\Snippets-Install.ps1" Pack="true" PackagePath="tools\Snippets-Install.ps1" />
     <None Update="Tools\Snippets-Uninstall.ps1" Pack="true" PackagePath="tools\Snippets-Uninstall.ps1" />
+    <None Update="Tools\EditorConfig-Update.ps1" Pack="true" PackagePath="tools\EditorConfig-Update.ps1" />
   </ItemGroup>
   
   <ItemGroup>
