@@ -26,7 +26,7 @@
     <IsTool>true</IsTool>
     <DevelopmentDependency>true</DevelopmentDependency>
     <NoPackageAnalysis>true</NoPackageAnalysis>
-    <MinClientVersion>4.3</MinClientVersion>
+    <MinClientVersion>3.3</MinClientVersion>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <IncludeContentInPack>true</IncludeContentInPack>
   </PropertyGroup>
