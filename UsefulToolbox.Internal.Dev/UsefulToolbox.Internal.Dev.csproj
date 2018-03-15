@@ -15,7 +15,7 @@
     <Authors>Igor Eroshkin</Authors>
     <Company>Useful Toolbox .NET</Company>
     <Copyright>Copyright © 2016 Igor Eroshkin</Copyright>
-    <PackageLicenseUrl>https://github.com/UsefulToolboxNET/Internal.Dev/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageLicenseUrl>https://github.com/UsefulToolboxNET/Internal.Dev/raw/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/UsefulToolboxNET/Internal.Dev</PackageProjectUrl>
     <RepositoryUrl>https://github.com/UsefulToolboxNET/Internal.Dev</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
