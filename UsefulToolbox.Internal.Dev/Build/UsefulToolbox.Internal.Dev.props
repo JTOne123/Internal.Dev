@@ -1,5 +1,6 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <CodeAnalysisRuleSet>$(MSBuildThisFileDirectory)..\codingConventions\UsefulToolbox.ruleset</CodeAnalysisRuleSet>
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
   </PropertyGroup>
 </Project>
