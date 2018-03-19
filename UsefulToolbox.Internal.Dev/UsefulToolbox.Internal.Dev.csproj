@@ -37,6 +37,7 @@
     <None Update="CodingConventions\UsefulToolbox.editorconfig" Pack="true" PackagePath="codingConventions\UsefulToolbox.editorconfig" />
     <None Update="CodeAnalysisDictionary.xml" Pack="true" />
     <None Update="Build\UsefulToolbox.Internal.Dev.props" Pack="true" PackagePath="build\UsefulToolbox.Internal.Dev.props" />
+    <None Update="UsefulToolbox.licenseheader" Pack="true" />
   </ItemGroup>
 
   <ItemGroup>
