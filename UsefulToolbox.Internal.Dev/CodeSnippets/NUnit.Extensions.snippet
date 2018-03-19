@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
   <CodeSnippet Format="1.0.0">
     <Header>
@@ -10,7 +10,7 @@
       <Description>Code snippet for an NUnit test class</Description>
       <HelpUrl>
       </HelpUrl>
-      <Shortcut>tclass</Shortcut>
+      <Shortcut>tc</Shortcut>
     </Header>
     <Snippet>
       <Imports>
@@ -49,7 +49,7 @@ public class $ClassName$Tests
       <Description>Code snippet for an NUnit abstract test class</Description>
       <HelpUrl>
       </HelpUrl>
-      <Shortcut>atclass</Shortcut>
+      <Shortcut>atc</Shortcut>
     </Header>
     <Snippet>
       <Declarations>
@@ -75,57 +75,12 @@ public class $ClassName$Tests
       <SnippetTypes>
         <SnippetType>Expansion</SnippetType>
       </SnippetTypes>
-      <Title>NUnit Test Case Helper</Title>
-      <Author>Igor Eroshkin</Author>
-      <Description>Code snippet for an NUnit test case helper method</Description>
-      <HelpUrl>
-      </HelpUrl>
-      <Shortcut>tcaseh</Shortcut>
-    </Header>
-    <Snippet>
-      <Imports>
-        <Import>
-          <Namespace>NUnit.Framework</Namespace>
-        </Import>
-      </Imports>
-      <Declarations>
-        <Literal Editable="true">
-          <ID>parameters</ID>
-          <ToolTip>Test case parameters</ToolTip>
-          <Default>
-          </Default>
-          <Function>
-          </Function>
-        </Literal>
-        <Literal Editable="true">
-          <ID>arguments</ID>
-          <ToolTip>Test case arguments</ToolTip>
-          <Default>
-          </Default>
-          <Function>
-          </Function>
-        </Literal>
-      </Declarations>
-      <Code Language="csharp" Delimiter="$">
-        <![CDATA[private static TestCaseData TestCase($parameters$)
-{
-	return new TestCaseData($arguments$);$end$
-}]]>
-      </Code>
-    </Snippet>
-  </CodeSnippet>
-
-  <CodeSnippet Format="1.0.0">
-    <Header>
-      <SnippetTypes>
-        <SnippetType>Expansion</SnippetType>
-      </SnippetTypes>
       <Title>NUnit Test Method</Title>
       <Author>Igor Eroshkin</Author>
       <Description>Code snippet for an NUnit test method</Description>
       <HelpUrl>
       </HelpUrl>
-      <Shortcut>tmethod</Shortcut>
+      <Shortcut>tm</Shortcut>
     </Header>
     <Snippet>
       <Imports>
@@ -169,7 +124,7 @@ public void $MethodName$_$TestName$()
       <Description>Code snippet for an NUnit async test method</Description>
       <HelpUrl>
       </HelpUrl>
-      <Shortcut>atmethod</Shortcut>
+      <Shortcut>atm</Shortcut>
     </Header>
     <Snippet>
       <Imports>
@@ -216,7 +171,7 @@ public async Task $MethodName$Async_$TestName$()
       <Description>Code snippet for an NUnit test method that checks for ArgumentNullException</Description>
       <HelpUrl>
       </HelpUrl>
-      <Shortcut>tmethodn</Shortcut>
+      <Shortcut>tmn</Shortcut>
     </Header>
     <Snippet>
       <Imports>
@@ -263,7 +218,7 @@ public void $MethodName$_Null$ArgumentName$_ThrowsArgumentNullException()
       <Description>Code snippet for an NUnit async test method that checks for ArgumentNullException</Description>
       <HelpUrl>
       </HelpUrl>
-      <Shortcut>atmethodn</Shortcut>
+      <Shortcut>atmn</Shortcut>
     </Header>
     <Snippet>
       <Imports>
@@ -310,7 +265,7 @@ public void $MethodName$Async_Null$ArgumentName$_ThrowsArgumentNullException()
       <Description>Code snippet for an NUnit test method with abstract test cases</Description>
       <HelpUrl>
       </HelpUrl>
-      <Shortcut>tmethodas</Shortcut>
+      <Shortcut>tmas</Shortcut>
     </Header>
     <Snippet>
       <Imports>
@@ -362,7 +317,7 @@ protected abstract IEnumerable<TestCaseData> $MethodName$TestCases { get; }]]>
       <Description>Code snippet for an NUnit async test method with abstract test cases</Description>
       <HelpUrl>
       </HelpUrl>
-      <Shortcut>atmethodas</Shortcut>
+      <Shortcut>atmas</Shortcut>
     </Header>
     <Snippet>
       <Imports>
@@ -417,7 +372,7 @@ protected abstract IEnumerable<TestCaseData> $MethodName$TestCases { get; }]]>
       <Description>Code snippet for an NUnit test method with test cases</Description>
       <HelpUrl>
       </HelpUrl>
-      <Shortcut>tmethods</Shortcut>
+      <Shortcut>tms</Shortcut>
     </Header>
     <Snippet>
       <Imports>
@@ -473,7 +428,7 @@ private IEnumerable<TestCaseData> $MethodName$TestCases => TestCases(
       <Description>Code snippet for an NUnit async test method with test cases</Description>
       <HelpUrl>
       </HelpUrl>
-      <Shortcut>atmethods</Shortcut>
+      <Shortcut>atms</Shortcut>
     </Header>
     <Snippet>
       <Imports>
