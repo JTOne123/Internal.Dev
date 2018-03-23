@@ -11,7 +11,7 @@
     <FileVersion>1.0.0.0</FileVersion>
     <InformationalVersion>1.0.0.0</InformationalVersion>
     <PackageTags>useful;toolbox;code;snippet;analysis;development;internal</PackageTags>
-    <Description>An internal package containing common developer tools for the Useful Toolbox .NET projects. Applications and libraries should not reference this package directly. </Description>
+    <Description>An internal package containing common developer tools for the Useful Toolbox .NET projects. Applications and libraries should not reference this package directly.</Description>
     <IsTool>true</IsTool>
     <DevelopmentDependency>true</DevelopmentDependency>
     <NoPackageAnalysis>true</NoPackageAnalysis>
