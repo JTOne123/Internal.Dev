@@ -1,6 +1,20 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <CodeAnalysisRuleSet>$(MSBuildThisFileDirectory)..\codingConventions\UsefulToolbox.ruleset</CodeAnalysisRuleSet>
-    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Authors>Igor Eroshkin</Authors>
+    <Company>Useful Toolbox .NET</Company>
+    <Copyright>Copyright © 2016 Igor Eroshkin</Copyright>
+    <PackageIconUrl>https://github.com/UsefulToolboxNET/Internal.Dev/raw/master/UsefulToolbox.Internal.Dev/Content/logo64x64.png</PackageIconUrl>
+    <MinClientVersion>3.3</MinClientVersion>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
 </Project>
