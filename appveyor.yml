@@ -30,7 +30,7 @@ before_build:
   
 build:
   publish_nuget: true
-  verbosity: minimal
+  verbosity: normal
 
 for:
 # master configuration (build, deploy)
