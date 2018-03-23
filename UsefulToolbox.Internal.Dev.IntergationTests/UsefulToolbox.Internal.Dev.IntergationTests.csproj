@@ -5,9 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="UsefulToolbox.Internal.Dev" Version="1.1.1">
+    <PackageReference Include="UsefulToolbox.Internal.Dev" Version="1.2.0-dev.76">
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
   </ItemGroup>
-
 </Project>
