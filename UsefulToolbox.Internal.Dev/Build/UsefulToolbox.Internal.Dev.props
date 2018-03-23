@@ -5,12 +5,20 @@
   </PropertyGroup>
 
   <PropertyGroup>
+    <GitHubRepositoryName>$(MSBuildProjectName.Replace(`UsefulToolbox.`, ``))</GitHubRepositoryName>
+  </PropertyGroup>
+
+  <PropertyGroup>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <Authors>Igor Eroshkin</Authors>
     <Company>Useful Toolbox .NET</Company>
     <Copyright>Copyright © 2016 Igor Eroshkin</Copyright>
     <PackageIconUrl>https://github.com/UsefulToolboxNET/Internal.Dev/raw/master/UsefulToolbox.Internal.Dev/Content/logo64x64.png</PackageIconUrl>
     <MinClientVersion>3.3</MinClientVersion>
+    <PackageLicenseUrl>https://github.com/UsefulToolboxNET/$(GitHubRepositoryName)/raw/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/UsefulToolboxNET/$(GitHubRepositoryName)</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/UsefulToolboxNET/$(GitHubRepositoryName)</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
   <PropertyGroup>

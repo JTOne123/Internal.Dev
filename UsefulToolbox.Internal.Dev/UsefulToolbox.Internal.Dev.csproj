@@ -10,10 +10,6 @@
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
     <InformationalVersion>1.0.0.0</InformationalVersion>
-    <PackageLicenseUrl>https://github.com/UsefulToolboxNET/Internal.Dev/raw/master/LICENSE</PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/UsefulToolboxNET/Internal.Dev</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/UsefulToolboxNET/Internal.Dev</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
     <PackageTags>useful;toolbox;code;snippet;analysis;development;internal</PackageTags>
     <Description>An internal package containing common developer tools for the Useful Toolbox .NET projects. Applications and libraries should not reference this package directly. </Description>
     <IsTool>true</IsTool>
